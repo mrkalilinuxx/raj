@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Set a background color */
+        }
+        #video-background {
+            width: 100%;
+            height: auto; /* Ensure video scales proportionally */
+            object-fit: cover; /* Cover the entire container */
+        }
+        #content {
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 400px; /* Limit content width for better readability */
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        #buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        button {
+            font-size: 16px;
+            background-color: #ff4081;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+        button:hover {
+            background-color: #d81b60;
+        }
+        #video-container {
+            display: none;
+            margin-top: 20px;
+        }
+        video {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video id="video-background" autoplay loop muted>
+        <source src="https://github.com/mrkalilinuxx/raj/raw/main/5_6143256164881666277.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="content">
+        <h1>Surprise darling, tap yes</h1>
+        <div id="buttons">
+            <button onclick="showVideo()">Yes</button>
+            <button>No</button>
+        </div>
+        <div id="video-container">
+            <video id="surprise-video" controls autoplay>
+                <source src="https://github.com/mrkalilinuxx/raj/raw/main/Black%20and%20Brown%20Cinematic%20Aesthetic%20Film%20Frame%20Love%20Poem%20Animated%20Instagram%20Reel%20Video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        function showVideo() {
+            document.getElementById("video-container").style.display = "block";
+            document.getElementById("surprise-video").play(); // Start playing the video
+        }
+    </script>
+</body>
+</html>
